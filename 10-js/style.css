@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #23272e;
+  font-family: monospace, "Mukta", sans-serif;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  border-radius: 10px;
+  background-color: #000;
+  height: 5px;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 10px;
+}
+
+.nav {
+  background-color: #1e2227;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.nav a {
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.nav a::before {
+  content: "";
+  background-color: #00ff9d;
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: 20%;
+  transition: all 0.5s ease;
+}
+
+.nav a:hover {
+  color: #00ff9d;
+}
+
+.nav a:hover::before {
+  width: 100%;
+}
+
+.main {
+  margin: 80px 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main .card {
+  padding: 10px;
+  width: 250px;
+  margin: 20px;
+  background-color: #1e2227;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease;
+}
+
+.main .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 1);
+}
+
+.main .card .card-body img {
+  width: 100%;
+}
+
+.main .card .card-footer {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main .card .card-footer .title h4 {
+  margin: 0;
+  color: #00ff9d;
+}
+
+.main .card .card-footer .link a {
+  text-decoration: none;
+  background-color: rgb(0, 30, 255);
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.main .card .card-footer .link a:hover {
+  background-color: rgb(47, 71, 255);
+  color: black;
+}
